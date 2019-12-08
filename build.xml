@@ -1,0 +1,5 @@
+<target name="phpcpd">
+    <phpcpd >
+        <formatter type="pmd" outfile="pmd-cpd.xml"/>
+    </phpcpd>
+</target>
