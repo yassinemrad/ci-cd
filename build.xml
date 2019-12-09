@@ -1,3 +1,5 @@
-<logging>
- <log type="coverage-html" target=""/>
-</logging>
+<target name="bower" description="Installing bower dependencies">
+ <exec executable="bower" failonerror="true">
+  <arg value="install" />
+ </exec>
+</target>
