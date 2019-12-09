@@ -1,5 +1,3 @@
-<target name="phpcpd">
-    <phpcpd >
-        <formatter type="pmd" outfile="pmd-cpd.xml"/>
-    </phpcpd>
-</target>
+<logging>
+ <log type="coverage-html" target=""/>
+</logging>
