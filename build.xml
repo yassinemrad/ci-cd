@@ -7,9 +7,10 @@
 <property name="phploc" value="phploc"/>
 <property name="phpmd" value="phpmd"/>
  
- <target name="full-build" depends="prepare" description="Performs static analysis, runs the tests, and generates project documentation"/>
-<target name="prepare" unless="prepare.done" description="Prepare for build">
-<mkdir dir="api"/>
-<property name="prepare.done" value="true"/>
+<target name="phpcpd" unless="phpcpd.done" description="Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.">
+<exec executable="${phpcpd}" taskname="phpcpd">
+<arg path="."/>
+</exec>
+<property name="phpcpd.done" value="true"/>
 </target>
  </project>
