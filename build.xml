@@ -1,5 +1,3 @@
-<target name="bower" description="Installing bower dependencies">
- <exec executable="bower" failonerror="true">
-  <arg value="install" />
- </exec>
-</target>
+<logging>
+ <log type="coverage-html" target="build/index.php"/>
+</logging>
