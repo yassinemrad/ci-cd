@@ -7,5 +7,6 @@
 <property name="phploc" value="phploc"/>
 <property name="phpmd" value="phpmd"/>
  
- 
+ <target name="full-build" depends="prepare,static-analysis,phpunit,phpdox,-check-failure" description="Performs static analysis, runs the tests, and generates project documentation"/>
+
  </project>
