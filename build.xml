@@ -7,6 +7,9 @@
 <property name="phploc" value="phploc"/>
 <property name="phpmd" value="phpmd"/>
  
- <target name="full-build" depends="prepare,static-analysis,phpunit,phpdox,-check-failure" description="Performs static analysis, runs the tests, and generates project documentation"/>
-
+ <target name="full-build" depends="prepare" description="Performs static analysis, runs the tests, and generates project documentation"/>
+<target name="prepare" unless="prepare.done" depends="clean" description="Prepare for build">
+<mkdir dir="api"/>
+<property name="prepare.done" value="true"/>
+</target>
  </project>
