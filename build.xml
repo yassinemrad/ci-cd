@@ -1,13 +1,11 @@
-<phpdox xmlns="http://xml.phpdox.net/config">
- <project name="ci-cd" source="." workdir=".">
-  <collector publiconly="false">
-   <include mask="*.php" />
-  </collector>
-
-  <generator output="build">
-   <build engine="html" enabled="true" output="api">
-    <file extension="html" />
-   </build>
-  </generator>
+<project name="ci-cd" default="full-build">
+<!--  By default, we assume all tools to be on the $PATH  -->
+<property name="pdepend" value="pdepend"/>
+<property name="phpcpd" value="phpcpd"/>
+<property name="phpcs" value="phpcs"/>
+<property name="phpdox" value="phpdox"/>
+<property name="phploc" value="phploc"/>
+<property name="phpmd" value="phpmd"/>
+ 
+ 
  </project>
-</phpdox>
