@@ -1,3 +1,13 @@
-<logging>
- <log type="coverage-html" target="build/index.php"/>
-</logging>
+<phpdox xmlns="http://xml.phpdox.net/config">
+ <project name="ci-cd" source="." workdir=".">
+  <collector publiconly="false">
+   <include mask="*.php" />
+  </collector>
+
+  <generator output="build">
+   <build engine="html" enabled="true" output="api">
+    <file extension="html" />
+   </build>
+  </generator>
+ </project>
+</phpdox>
